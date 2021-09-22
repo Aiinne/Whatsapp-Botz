@@ -1,54 +1,68 @@
 {
-  "name": "termux-wabot",
-  "version": "0.0.2",
-  "description": "No comment",
+  "name": "Aine",
+  "version": "1.0.0",
+  "description": "Aine for whatsapp online with termux",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node start",
+    "play": "nodemon index"
   },
   "keywords": [
-    "termux",
-    "whatsapp",
-    "bot",
-    "whatsapp",
-    "bot"
+    "k"
   ],
-  "author": "MhankBarBar",
-  "license": "ISC",
-  "dependencies": {
-    "@adiwajshing/baileys": "^3.5.2",
-    "async": "^3.2.0",
-    "axios": "^0.21.1",
-    "base64-to-image": "^1.0.2",
-    "cfonts": "^2.9.0",
-    "crypto": "^1.0.1",
-    "escape-string-regexp": "^5.0.0",
-    "fake-useragent": "^1.0.1",
-    "file-type": "^16.2.0",
-    "fluent-ffmpeg": "^2.1.2",
-    "image-to-base64": "^2.2.0",
-    "imgbb-uploader": "^1.3.3",
-    "lolis.life": "^4.0.0",
-    "moment-timezone": "^0.5.32",
-    "multistream": "^4.0.1",
-    "node-fetch": "^2.6.1",
-    "remove.bg": "^1.3.0",
-    "request": "^2.81.0",
-    "spinnies": "^0.5.1",
-    "node-gtts": "^2.0.2",
-    "tiktok-scraper": "^1.4.7"
-  },
-  "devDependencies": {},
+  "author": "Muhammad Ridwan Reynaldy",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mhankbarbar/termux-wabot.git"
+    "url": "git+https://github.com/qisyana/qisbotz.git"
   },
   "bugs": {
-    "url": "https://github.com/mhankbarbar/termux-wabot/issues"
+    "url": "https://github.com/qisyana/qisbotz/issues"
   },
-  "homepage": "https://github.com/mhankbarbar/termux-wabot#readme"
+  "homepage": "https://github.com/qisyana/qisbotz/readme",
+  "license": "ISC",
+  "dependencies": {
+    "@adiwajshing/baileys": "github:adiwajshing/baileys",
+    "async": "^3.2.1",
+    "awesome-phonenumber": "^2.54.0",
+    "axios": "^0.21.1",
+    "brainly-scraper": "^1.0.3",
+    "cfonts": "^2.9.2",
+    "child_process": "^1.0.2",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^10.0.0",
+    "emoji-api": "^1.0.2",
+    "escape-string-regexp": "^5.0.0",
+    "fake-useragent": "^1.0.1",
+    "file-type": "^16.5.3",
+    "fluent-ffmpeg": "^2.1.2",
+    "fs-extra": "^10.0.0",
+    "got": "^11.8.2",
+    "image-to-base64": "^2.2.0",
+    "base64-to-image": "^1.0.2",
+    "imgbb-uploader": "^1.3.1",
+    "mathjs": "^9.4.3",
+    "moment-timezone": "^0.5.33",
+    "ms": "^2.1.3",
+    "os": "^0.1.1",
+    "multistream": "^4.1.0",
+    "needle": "^3.0.0",
+    "node-fetch": "^2.6.1",
+    "node-gtts": "^2.0.2",
+    "node-tesseract-ocr": "^2.2.1",
+    "parse-ms": "^2.1.0",
+    "path": "^0.12.7",
+    "performance-now": "^2.1.0",
+    "qrcode-terminal": "^0.12.0",
+    "qrcode": "^1.4.4",
+    "remove.bg": "^1.3.0",
+    "request": "^2.88.2",
+    "spinnies": "^0.5.1",
+    "tiktok-scraper": "^1.4.7",
+    "tiktok-scraper-without-watermark": "^1.0.6",
+    "util": "^0.12.4"
+  }
 }
