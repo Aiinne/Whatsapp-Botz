@@ -3528,11 +3528,6 @@ await client.relayWAMessage(gwee)
                   break
                   }
                
-                  if (budy.includes(`cok`)) {
-                  	oh = fs.readFileSync(`./stiker/Dosa_1627026901784.webp`)
-                  client.sendMessage(from, oh, sticker, {quoted: mek})			
-                  break
-                  }
                                     if (budy.includes(`Test`)) {
                 reply(`aktif`)
                   break
