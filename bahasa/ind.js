@@ -11,7 +11,7 @@ exports.registered = (namaUser, umurUser, serialUser, time, sender) => {
 }
 
 exports.noregis = () => {
-	return`🚫  *USER NOT REGISTER*  🚫\n\n_Untuk mendaftarkan diri dengan mitsuha bot silahkan untuk kamu ketik .login_`
+	return`\`\`\`You not register, Please typing .verify\`\`\``
 }
 
 exports.wait = () => {
