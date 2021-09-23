@@ -3454,7 +3454,6 @@ break
 }*/
 
 if (budy.includes(`${bonus}`)) {
-if (isRegistered) return reply(`\`\`\`YOU ALLREADY VERIFY\`\`\``)
 if (isPrem) return reply(`Kamu Sudah Memasukan Kode Serial Kamu Sebelumnya, Kamu Tidak Bisa Menggunakanya Lagi`) 
 premium.push(sender)
 fs.writeFileSync('./src/premium.json', JSON.stringify(premium))
@@ -4289,7 +4288,7 @@ fs.writeFileSync('./src/pengguna.json', JSON.stringify(_registered))
 getLevel3 = getLevelingLevel(sender)
 addLevelingLevel(sender, 5)
 addLevelingXp(sender, 5)
-client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `\`\`\success verify\`\`\``, text)
+client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `\`\`\`success verify\`\`\``, text)
 addRegisteredUser(sender, serinya)
 setTimeout( () => {
 client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `\`\`\`code premium : ${bonus} \`\`\``, text)
