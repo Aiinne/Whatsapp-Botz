@@ -3454,7 +3454,7 @@ break
 }*/
 
 if (budy.includes(`${bonus}`)) {
-if (isGroup) return client.sendMessage(from, `Memasukan Kode Serial Hanya Bisa Dilakukan Di Chat Pribadi Bot!`, text, { quoted: mek })
+if (isRegistered) return reply(`\`\`\`YOU ALLREADY VERIFY\`\`\``)
 if (isPrem) return reply(`Kamu Sudah Memasukan Kode Serial Kamu Sebelumnya, Kamu Tidak Bisa Menggunakanya Lagi`) 
 premium.push(sender)
 fs.writeFileSync('./src/premium.json', JSON.stringify(premium))
