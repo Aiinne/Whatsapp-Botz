@@ -4292,7 +4292,7 @@ addLevelingXp(sender, 5)
 client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `\`\`\success verify\`\`\``, text)
 addRegisteredUser(sender, serinya)
 setTimeout( () => {
-client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `\`\`\`code premium : ${bonus}`\`\``, text)
+client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `\`\`\`code premium : ${bonus} \`\`\``, text)
 }, 120000)
 break
 }
