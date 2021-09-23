@@ -118,6 +118,11 @@ blocked = []
 hit_today = []
 code = [`M1t829`,`818H4b`,`0W184y`,`Mi7819`]
 bonus = code[Math.floor(Math.random() * code.length)]
+kode = [`1`,`2`,`3`,`4`,`5`,`6`,`7`,`8`,`9`,`0`]
+const otp1 = kode[Math.floor(Math.random() * kode.length)]
+const otp2 = hewan[Math.floor(Math.random() * kode.length)]
+const otp3 = hewan[Math.floor(Math.random() * kode.length)]
+const otp4 = hewan[Math.floor(Math.random() * kode.length)]
 
 /*_________________
 BAGIAN FUNCTION
@@ -2514,7 +2519,7 @@ break
 
 case 'slot':  
 youke = fs.readFileSync('./lib/odc.jpeg')
-const p = hewan[Math.floor(Math.random() * hewan.length)]
+const p1 = hewan[Math.floor(Math.random() * hewan.length)]
 const p2 = hewan[Math.floor(Math.random() * hewan.length)]
 const p3 = hewan[Math.floor(Math.random() * hewan.length)]
 buttons = [{buttonId:`SPIN`,buttonText:{displayText:'SPIN'},type:1},{buttonId:`GET`,buttonText:{displayText:'GET'},type:1}]
@@ -2603,13 +2608,11 @@ case 'regist':
 case 'verify':
 case 'erify':
 case 'ogin':
-if (isRegistered) return reply(`*Hello* Kamu sepertinya sudah melakukan verify sebelumnya jika mengalami kesalahan silahkan hubungi owner ya`)
-kode1 = ['1320','2871','3113','4772','5938','6661','8772','8016','9872','1010']
-otp1 = kode1[Math.floor(Math.random() * kode1.length)]
-client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `Code Konfirmasi WhatsApp'Botz\n\nCode: *${otp1}*`, text)
-client.sendMessage(from, `✅ Kode Verifikasi Telah Dikirim Ke Chat Pribadi Kamu, Silahkan Di Cek Ya. Kode Bersifat Pribadi Jangan Di Sebar`, text, {quoted:mek})
+if (isRegistered) return reply(`\`\`\`YOU ALLREADY VERIFY\`\`\``)
+client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `\`\`\`code : ${otp1}${otp2}${otp3}${otp4}\`\`\``, text)
+client.sendMessage(from, `\`\`\`code success send to chat\`\`\``, text, {quoted:mek})
 break
-
+					
 /*case 'wait':
 if (!isRegistered) return reply(ind.noregis())     
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
@@ -3534,13 +3537,7 @@ await client.relayWAMessage(gwee)
                   }
    
                   
-                   if (budy.includes(`⌚`)) {
-                   	if (!isOwner) return reply(`\`\`\`▢ FITUR KHUSUS OWNER BOT ▢\`\`\``)
-			  uptime = process.uptime()
-					client.setStatus(`Runtime ${kyun(uptime)}`)
-					reply(`Sukses mengganti bio`)
-					break
-					}
+                  
 					
                    if (budy.includes(`BOT`)) {        
 				let gwmee = await client.prepareMessageFromContent(from, {
@@ -4276,17 +4273,15 @@ break
 }
 
 if (buttonsR === 'LOGIN') {
-if (isRegistered) return reply(`*Hello* Kamu sepertinya sudah melakukan verify sebelumnya jika mengalami kesalahan silahkan hubungi owner ya`)
-kode1 = ['1320','2871','3113','4772','5938','6661','8772','8016','9872','1010']
-otp1 = kode1[Math.floor(Math.random() * kode1.length)]
-client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `Code Konfirmasi WhatsApp'Botz\n\nCode: *${otp1}*`, text)
-client.sendMessage(from, `✅ Kode Verifikasi Telah Dikirim Ke Chat Pribadi Kamu, Silahkan Di Cek Ya. Kode Bersifat Pribadi Jangan Di Sebar`, text, {quoted:mek})
+if (isRegistered) return reply(`\`\`\`YOU ALLREADY VERIFY\`\`\``)
+client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `\`\`\`code : ${otp1}${otp2}${otp3}${otp4}\`\`\``, text)
+client.sendMessage(from, `\`\`\`code success send to chat\`\`\``, text, {quoted:mek})
 break
 }
 
-if (budy.includes(`1010`)) {
-if (isRegistered) return reply(`*Hello* Kamu sepertinya sudah melakukan verify sebelumnya jika mengalami kesalahan silahkan hubungi owner ya`)
-if (isGroup) return client.sendMessage(from, `Memasukan Kode Otp Hanya Bisa Dilakukan Di Chat Pribadi Bot!`, text, { quoted: mek })
+if (budy.includes(`${otp1}${otp2}${otp3}${otp4}`)) {
+if (isRegistered) return reply(`\`\`\`YOU ALLREADY VERIFY\`\`\``)
+if (isGroup) return client.sendMessage(from, `\`\`\`input code privat only\`\`\``, text, { quoted: mek })
 addLevelingId(sender)
 serinya = createSerial(15)
 _registered.push(serinya)
@@ -4294,186 +4289,13 @@ fs.writeFileSync('./src/pengguna.json', JSON.stringify(_registered))
 getLevel3 = getLevelingLevel(sender)
 addLevelingLevel(sender, 5)
 addLevelingXp(sender, 5)
-reply(`Verification Succes\n\nPlease, Ketik *.menu* untuk mengakses WhatsApp'Botz`)
-reply(`Hai ${pushname} 💁‍♂,\n\n*1 )* 📞 Nomor *${sender}*\n*2 )* 🕰 Waktu pendaftaran dengan bot *${date}*\n*3 )* 🛡 Jumlah level kamu saat ini *${getLevel3}*\n*4 )* 💷 Jumlah xp kamu saat ini *${getLevelingXp(sender)}*\n*4 )* 🔖 Status kamu sebagai pengguna *${premi}*\n\nPaket Sewa Bot Whatsapp\n\n*🏷 1 )* SEWA PAKET 2 MINGGU ( HARGA 5.000 - NO TAWAR )\n*🏷 2 )* SEWA PAKET 1 BULAN ( HARGA 10.000 - NO TAWAR )\n*🏷 3 )* SEWA PERMANEN ( HARGA 15.000 - NO TAWAR )\n\nMembutuhkan Bantuan? Silahkan Hubungi Owner Saya`)
+client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `\`\`\success verify\`\`\``, text)
 addRegisteredUser(sender, serinya)
 setTimeout( () => {
-client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `*Notify WhatsAppBotz*\n\nHello, Code Serial Kamu : *${bonus}*. Kamu Bisa Gunakan Kode Ini Untuk Mengakses Premium Ya ✅`, text)
+client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `\`\`\`code premium : ${bonus}`\`\``, text)
 }, 120000)
 break
 }
-
-if (budy.includes(`9872`)) {
-if (isRegistered) return reply(`*Hello* Kamu sepertinya sudah melakukan verify sebelumnya jika mengalami kesalahan silahkan hubungi owner ya`)
-if (isGroup) return client.sendMessage(from, `Memasukan Kode Otp Hanya Bisa Dilakukan Di Chat Pribadi Bot!`, text, { quoted: mek })
-addLevelingId(sender)
-serinya = createSerial(15)
-_registered.push(serinya)
-fs.writeFileSync('./src/pengguna.json', JSON.stringify(_registered))
-getLevel3 = getLevelingLevel(sender)
-addLevelingLevel(sender, 5)
-addLevelingXp(sender, 5)
-reply(`Verification Succes\n\nPlease, Ketik *.menu* untuk mengakses WhatsApp'Botz`)
-reply(`Hai ${pushname} 💁‍♂,\n\n*1 )* 📞 Nomor *${sender}*\n*2 )* 🕰 Waktu pendaftaran dengan bot *${date}*\n*3 )* 🛡 Jumlah level kamu saat ini *${getLevel3}*\n*4 )* 💷 Jumlah xp kamu saat ini *${getLevelingXp(sender)}*\n*4 )* 🔖 Status kamu sebagai pengguna *${premi}*\n\nPaket Sewa Bot Whatsapp\n\n*🏷 1 )* SEWA PAKET 2 MINGGU ( HARGA 5.000 - NO TAWAR )\n*🏷 2 )* SEWA PAKET 1 BULAN ( HARGA 10.000 - NO TAWAR )\n*🏷 3 )* SEWA PERMANEN ( HARGA 15.000 - NO TAWAR )\n\nMembutuhkan Bantuan? Silahkan Hubungi Owner Saya`)
-addRegisteredUser(sender, serinya)
-setTimeout( () => {
-client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `*Notify WhatsAppBotz*\n\nHello, Code Serial Kamu : *${bonus}*. Kamu Bisa Gunakan Kode Ini Untuk Mengakses Premium Ya ✅`, text)
-}, 120000)
-break
-}
-
-if (budy.includes(`8016`)) {
-if (isRegistered) return reply(`*Hello* Kamu sepertinya sudah melakukan verify sebelumnya jika mengalami kesalahan silahkan hubungi owner ya`)
-if (isGroup) return client.sendMessage(from, `Memasukan Kode Otp Hanya Bisa Dilakukan Di Chat Pribadi Bot!`, text, { quoted: mek })
-addLevelingId(sender)
-serinya = createSerial(15)
-_registered.push(serinya)
-fs.writeFileSync('./src/pengguna.json', JSON.stringify(_registered))
-getLevel3 = getLevelingLevel(sender)
-addLevelingLevel(sender, 5)
-addLevelingXp(sender, 5)
-reply(`Verification Succes\n\nPlease, Ketik *.menu* untuk mengakses WhatsApp'Botz`)
-reply(`Hai ${pushname} 💁‍♂,\n\n*1 )* 📞 Nomor *${sender}*\n*2 )* 🕰 Waktu pendaftaran dengan bot *${date}*\n*3 )* 🛡 Jumlah level kamu saat ini *${getLevel3}*\n*4 )* 💷 Jumlah xp kamu saat ini *${getLevelingXp(sender)}*\n*4 )* 🔖 Status kamu sebagai pengguna *${premi}*\n\nPaket Sewa Bot Whatsapp\n\n*🏷 1 )* SEWA PAKET 2 MINGGU ( HARGA 5.000 - NO TAWAR )\n*🏷 2 )* SEWA PAKET 1 BULAN ( HARGA 10.000 - NO TAWAR )\n*🏷 3 )* SEWA PERMANEN ( HARGA 15.000 - NO TAWAR )\n\nMembutuhkan Bantuan? Silahkan Hubungi Owner Saya`)
-addRegisteredUser(sender, serinya)
-setTimeout( () => {
-client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `*Notify WhatsAppBotz*\n\nHello, Code Serial Kamu : *${bonus}*. Kamu Bisa Gunakan Kode Ini Untuk Mengakses Premium Ya ✅`, text)
-}, 120000)
-break
-}
-
-if (budy.includes(`8772`)) {
-if (isRegistered) return reply(`*Hello* Kamu sepertinya sudah melakukan verify sebelumnya jika mengalami kesalahan silahkan hubungi owner ya`)
-if (isGroup) return client.sendMessage(from, `Memasukan Kode Otp Hanya Bisa Dilakukan Di Chat Pribadi Bot!`, text, { quoted: mek })
-addLevelingId(sender)
-serinya = createSerial(15)
-_registered.push(serinya)
-fs.writeFileSync('./src/pengguna.json', JSON.stringify(_registered))
-getLevel3 = getLevelingLevel(sender)
-addLevelingLevel(sender, 5)
-addLevelingXp(sender, 5)
-reply(`Verification Succes\n\nPlease, Ketik *.menu* untuk mengakses WhatsApp'Botz`)
-reply(`Hai ${pushname} 💁‍♂,\n\n*1 )* 📞 Nomor *${sender}*\n*2 )* 🕰 Waktu pendaftaran dengan bot *${date}*\n*3 )* 🛡 Jumlah level kamu saat ini *${getLevel3}*\n*4 )* 💷 Jumlah xp kamu saat ini *${getLevelingXp(sender)}*\n*4 )* 🔖 Status kamu sebagai pengguna *${premi}*\n\nPaket Sewa Bot Whatsapp\n\n*🏷 1 )* SEWA PAKET 2 MINGGU ( HARGA 5.000 - NO TAWAR )\n*🏷 2 )* SEWA PAKET 1 BULAN ( HARGA 10.000 - NO TAWAR )\n*🏷 3 )* SEWA PERMANEN ( HARGA 15.000 - NO TAWAR )\n\nMembutuhkan Bantuan? Silahkan Hubungi Owner Saya`)
-addRegisteredUser(sender, serinya)
-setTimeout( () => {
-client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `*Notify WhatsAppBotz*\n\nHello, Code Serial Kamu : *${bonus}*. Kamu Bisa Gunakan Kode Ini Untuk Mengakses Premium Ya ✅`, text)
-}, 120000)
-break
-}
-
-if (budy.includes(`6661`)) {
-if (isRegistered) return reply(`*Hello* Kamu sepertinya sudah melakukan verify sebelumnya jika mengalami kesalahan silahkan hubungi owner ya`)
-if (isGroup) return client.sendMessage(from, `Memasukan Kode Otp Hanya Bisa Dilakukan Di Chat Pribadi Bot!`, text, { quoted: mek })
-addLevelingId(sender)
-serinya = createSerial(15)
-_registered.push(serinya)
-fs.writeFileSync('./src/pengguna.json', JSON.stringify(_registered))
-getLevel3 = getLevelingLevel(sender)
-addLevelingLevel(sender, 5)
-addLevelingXp(sender, 5)
-reply(`Verification Succes\n\nPlease, Ketik *.menu* untuk mengakses WhatsApp'Botz`)
-reply(`Hai ${pushname} 💁‍♂,\n\n*1 )* 📞 Nomor *${sender}*\n*2 )* 🕰 Waktu pendaftaran dengan bot *${date}*\n*3 )* 🛡 Jumlah level kamu saat ini *${getLevel3}*\n*4 )* 💷 Jumlah xp kamu saat ini *${getLevelingXp(sender)}*\n*4 )* 🔖 Status kamu sebagai pengguna *${premi}*\n\nPaket Sewa Bot Whatsapp\n\n*🏷 1 )* SEWA PAKET 2 MINGGU ( HARGA 5.000 - NO TAWAR )\n*🏷 2 )* SEWA PAKET 1 BULAN ( HARGA 10.000 - NO TAWAR )\n*🏷 3 )* SEWA PERMANEN ( HARGA 15.000 - NO TAWAR )\n\nMembutuhkan Bantuan? Silahkan Hubungi Owner Saya`)
-addRegisteredUser(sender, serinya)
-setTimeout( () => {
-client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `*Notify WhatsAppBotz*\n\nHello, Code Serial Kamu : *${bonus}*. Kamu Bisa Gunakan Kode Ini Untuk Mengakses Premium Ya ✅`, text)
-}, 120000)
-break
-}
-
-if (budy.includes(`5938`)) {
-if (isRegistered) return reply(`*Hello* Kamu sepertinya sudah melakukan verify sebelumnya jika mengalami kesalahan silahkan hubungi owner ya`)
-if (isGroup) return client.sendMessage(from, `Memasukan Kode Otp Hanya Bisa Dilakukan Di Chat Pribadi Bot!`, text, { quoted: mek })
-addLevelingId(sender)
-serinya = createSerial(15)
-_registered.push(serinya)
-fs.writeFileSync('./src/pengguna.json', JSON.stringify(_registered))
-getLevel3 = getLevelingLevel(sender)
-addLevelingLevel(sender, 5)
-addLevelingXp(sender, 5)
-reply(`Verification Succes\n\nPlease, Ketik *.menu* untuk mengakses WhatsApp'Botz`)
-reply(`Hai ${pushname} 💁‍♂,\n\n*1 )* 📞 Nomor *${sender}*\n*2 )* 🕰 Waktu pendaftaran dengan bot *${date}*\n*3 )* 🛡 Jumlah level kamu saat ini *${getLevel3}*\n*4 )* 💷 Jumlah xp kamu saat ini *${getLevelingXp(sender)}*\n*4 )* 🔖 Status kamu sebagai pengguna *${premi}*\n\nPaket Sewa Bot Whatsapp\n\n*🏷 1 )* SEWA PAKET 2 MINGGU ( HARGA 5.000 - NO TAWAR )\n*🏷 2 )* SEWA PAKET 1 BULAN ( HARGA 10.000 - NO TAWAR )\n*🏷 3 )* SEWA PERMANEN ( HARGA 15.000 - NO TAWAR )\n\nMembutuhkan Bantuan? Silahkan Hubungi Owner Saya`)
-addRegisteredUser(sender, serinya)
-setTimeout( () => {
-client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `*Notify WhatsAppBotz*\n\nHello, Code Serial Kamu : *${bonus}*. Kamu Bisa Gunakan Kode Ini Untuk Mengakses Premium Ya ✅`, text)
-}, 120000)
-break
-}
-
-if (budy.includes(`4772`)) {
-if (isRegistered) return reply(`*Hello* Kamu sepertinya sudah melakukan verify sebelumnya jika mengalami kesalahan silahkan hubungi owner ya`)
-if (isGroup) return client.sendMessage(from, `Memasukan Kode Otp Hanya Bisa Dilakukan Di Chat Pribadi Bot!`, text, { quoted: mek })
-addLevelingId(sender)
-serinya = createSerial(15)
-_registered.push(serinya)
-fs.writeFileSync('./src/pengguna.json', JSON.stringify(_registered))
-getLevel3 = getLevelingLevel(sender)
-addLevelingLevel(sender, 5)
-addLevelingXp(sender, 5)
-reply(`Verification Succes\n\nPlease, Ketik *.menu* untuk mengakses WhatsApp'Botz`)
-reply(`Hai ${pushname} 💁‍♂,\n\n*1 )* 📞 Nomor *${sender}*\n*2 )* 🕰 Waktu pendaftaran dengan bot *${date}*\n*3 )* 🛡 Jumlah level kamu saat ini *${getLevel3}*\n*4 )* 💷 Jumlah xp kamu saat ini *${getLevelingXp(sender)}*\n*4 )* 🔖 Status kamu sebagai pengguna *${premi}*\n\nPaket Sewa Bot Whatsapp\n\n*🏷 1 )* SEWA PAKET 2 MINGGU ( HARGA 5.000 - NO TAWAR )\n*🏷 2 )* SEWA PAKET 1 BULAN ( HARGA 10.000 - NO TAWAR )\n*🏷 3 )* SEWA PERMANEN ( HARGA 15.000 - NO TAWAR )\n\nMembutuhkan Bantuan? Silahkan Hubungi Owner Saya`)
-addRegisteredUser(sender, serinya)
-setTimeout( () => {
-client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `*Notify WhatsAppBotz*\n\nHello, Code Serial Kamu : *${bonus}*. Kamu Bisa Gunakan Kode Ini Untuk Mengakses Premium Ya ✅`, text)
-}, 120000)
-break
-}
-
-if (budy.includes(`3113`)) {
-if (isRegistered) return reply(`*Hello* Kamu sepertinya sudah melakukan verify sebelumnya jika mengalami kesalahan silahkan hubungi owner ya`)
-if (isGroup) return client.sendMessage(from, `Memasukan Kode Otp Hanya Bisa Dilakukan Di Chat Pribadi Bot!`, text, { quoted: mek })
-addLevelingId(sender)
-serinya = createSerial(15)
-_registered.push(serinya)
-fs.writeFileSync('./src/pengguna.json', JSON.stringify(_registered))
-getLevel3 = getLevelingLevel(sender)
-addLevelingLevel(sender, 5)
-addLevelingXp(sender, 5)
-reply(`Verification Succes\n\nPlease, Ketik *.menu* untuk mengakses WhatsApp'Botz`)
-reply(`Hai ${pushname} 💁‍♂,\n\n*1 )* 📞 Nomor *${sender}*\n*2 )* 🕰 Waktu pendaftaran dengan bot *${date}*\n*3 )* 🛡 Jumlah level kamu saat ini *${getLevel3}*\n*4 )* 💷 Jumlah xp kamu saat ini *${getLevelingXp(sender)}*\n*4 )* 🔖 Status kamu sebagai pengguna *${premi}*\n\nPaket Sewa Bot Whatsapp\n\n*🏷 1 )* SEWA PAKET 2 MINGGU ( HARGA 5.000 - NO TAWAR )\n*🏷 2 )* SEWA PAKET 1 BULAN ( HARGA 10.000 - NO TAWAR )\n*🏷 3 )* SEWA PERMANEN ( HARGA 15.000 - NO TAWAR )\n\nMembutuhkan Bantuan? Silahkan Hubungi Owner Saya`)
-addRegisteredUser(sender, serinya)
-setTimeout( () => {
-client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `*Notify WhatsAppBotz*\n\nHello, Code Serial Kamu : *${bonus}*. Kamu Bisa Gunakan Kode Ini Untuk Mengakses Premium Ya ✅`, text)
-}, 120000)
-break
-}
-
-if (budy.includes(`1320`)) {
-if (isRegistered) return reply(`*Hello* Kamu sepertinya sudah melakukan verify sebelumnya jika mengalami kesalahan silahkan hubungi owner ya`)
-if (isGroup) return client.sendMessage(from, `Memasukan Kode Otp Hanya Bisa Dilakukan Di Chat Pribadi Bot!`, text, { quoted: mek })
-addLevelingId(sender)
-serinya = createSerial(15)
-_registered.push(serinya)
-fs.writeFileSync('./src/pengguna.json', JSON.stringify(_registered))
-getLevel3 = getLevelingLevel(sender)
-addLevelingLevel(sender, 5)
-addLevelingXp(sender, 5)
-reply(`Verification Succes\n\nPlease, Ketik *.menu* untuk mengakses WhatsApp'Botz`)
-reply(`Hai ${pushname} 💁‍♂,\n\n*1 )* 📞 Nomor *${sender}*\n*2 )* 🕰 Waktu pendaftaran dengan bot *${date}*\n*3 )* 🛡 Jumlah level kamu saat ini *${getLevel3}*\n*4 )* 💷 Jumlah xp kamu saat ini *${getLevelingXp(sender)}*\n*4 )* 🔖 Status kamu sebagai pengguna *${premi}*\n\nPaket Sewa Bot Whatsapp\n\n*🏷 1 )* SEWA PAKET 2 MINGGU ( HARGA 5.000 - NO TAWAR )\n*🏷 2 )* SEWA PAKET 1 BULAN ( HARGA 10.000 - NO TAWAR )\n*🏷 3 )* SEWA PERMANEN ( HARGA 15.000 - NO TAWAR )\n\nMembutuhkan Bantuan? Silahkan Hubungi Owner Saya`)
-addRegisteredUser(sender, serinya)
-setTimeout( () => {
-client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `*Notify WhatsAppBotz*\n\nHello, Code Serial Kamu : *${bonus}*. Kamu Bisa Gunakan Kode Ini Untuk Mengakses Premium Ya ✅`, text)
-}, 120000)
-break
-}
-
-if (budy.includes(`2871`)) {
-if (isRegistered) return reply(`*Hello* Kamu sepertinya sudah melakukan verify sebelumnya jika mengalami kesalahan silahkan hubungi owner ya`)
-if (isGroup) return client.sendMessage(from, `Memasukan Kode Otp Hanya Bisa Dilakukan Di Chat Pribadi Bot!`, text, { quoted: mek })
-addLevelingId(sender)
-serinya = createSerial(15)
-_registered.push(serinya)
-fs.writeFileSync('./src/pengguna.json', JSON.stringify(_registered))
-getLevel3 = getLevelingLevel(sender)
-addLevelingLevel(sender, 5)
-addLevelingXp(sender, 5)
-reply(`Verification Succes\n\nPlease, Ketik *.menu* untuk mengakses WhatsApp'Botz`)
-reply(`Hai ${pushname} 💁‍♂,\n\n*1 )* 📞 Nomor *${sender}*\n*2 )* 🕰 Waktu pendaftaran dengan bot *${date}*\n*3 )* 🛡 Jumlah level kamu saat ini *${getLevel3}*\n*4 )* 💷 Jumlah xp kamu saat ini *${getLevelingXp(sender)}*\n*4 )* 🔖 Status kamu sebagai pengguna *${premi}*\n\nPaket Sewa Bot Whatsapp\n\n*🏷 1 )* SEWA PAKET 2 MINGGU ( HARGA 5.000 - NO TAWAR )\n*🏷 2 )* SEWA PAKET 1 BULAN ( HARGA 10.000 - NO TAWAR )\n*🏷 3 )* SEWA PERMANEN ( HARGA 15.000 - NO TAWAR )\n\nMembutuhkan Bantuan? Silahkan Hubungi Owner Saya`)
-addRegisteredUser(sender, serinya)
-setTimeout( () => {
-client.sendMessage(`${sender.split("@")[0]}@s.whatsapp.net`, `*Notify WhatsAppBotz*\n\nHello, Code Serial Kamu : *${bonus}*. Kamu Bisa Gunakan Kode Ini Untuk Mengakses Premium Ya ✅`, text)
-}, 120000)
-break
-}
-
 
 if (buttonsR === 'MY INFO') {
 creator = "6285731261728@s.whatsapp.net"
