@@ -1,1 +1,1 @@
-node index.js
+worker :  npm i @adiwajshing/baileys@latest && npm start
