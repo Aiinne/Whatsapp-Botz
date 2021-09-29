@@ -40,8 +40,6 @@ const {
     prepareMessageFromContent,
     GroupSettingChange
 } = require('@adiwajshing/baileys')
-const imageToBase64 = require('image-to-base64')
-const base64ToImage = require('base64-to-image')
 const { color, bgcolor } = require('./lib/color')
 const { help } = require('./src/help')
 const { ind } = require('./bahasa')
@@ -54,9 +52,7 @@ const moment = require('moment-timezone')
 const { exec } = require('child_process')
 const fetch = require('node-fetch')
 const ffmpeg = require('fluent-ffmpeg')
-const { removeBackgroundFromImageFile } = require('remove.bg')
-const lolis = require('lolis.life')
-const loli = new lolis()
+
 
 /*_________________
 CONST JSON & JS
