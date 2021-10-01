@@ -31,7 +31,7 @@ ________________________________
 //JANGAN DIUBAH! UBAH AUTO REPORT
 //LU CUMAN RECODE YA! BUKAN CREATOR SC INI
 
-const {
+/*const {
     WAConnection,
     MessageType,
     Presence,
@@ -39,7 +39,28 @@ const {
     relayWAMessage,
     prepareMessageFromContent,
     GroupSettingChange
+} = require('@adiwajshing/baileys')*/
+
+const {
+    MessageType,
+    Presence,
+    MessageOptions,
+    Mimetype,
+    ChatModification,
+    WALocationMessage,
+    WA_MESSAGE_STUB_TYPES,
+    ReconnectMode,
+    ProxyAgent,
+    GroupSettingChange,
+    relayWAMessage,
+    prepareMessageFromContent,
+    waChatKey,
+    mentionedJid,
+    processTime,
+    Browser
 } = require('@adiwajshing/baileys')
+const speed = require('performance-now')
+const brainly = require('brainly-scraper')
 const imageToBase64 = require('image-to-base64')
 const base64ToImage = require('base64-to-image')
 const { color, bgcolor } = require('./lib/color')
